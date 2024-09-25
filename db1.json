@@ -1,0 +1,176 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "phone": "1234567890",
+      "password": "password"
+    },
+    {
+      "id": "bfc4",
+      "phone": "8270762497",
+      "password": "12345"
+    }
+  ],
+  "seats": [
+    {
+      "id": "1",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "2",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "3",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "4",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "5",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "6",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "7",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "8",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "9",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "10"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "11"
+    },
+    {
+      "id": "12",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "13",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "14",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "15",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "16",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "17",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "18",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "19",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "20"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "21"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "22"
+    },
+    {
+      "id": "23",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "24",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "id": "25",
+      "status": "available",
+      "userId": null
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "26"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "27"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "28"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "29"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "30"
+    },
+    {
+      "status": "reserved",
+      "userId": "bfc4",
+      "id": "31"
+    },
+    {
+      "id": "32",
+      "status": "available",
+      "userId": null
+    }
+  ]
+}
