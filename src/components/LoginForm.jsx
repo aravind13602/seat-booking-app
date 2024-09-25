@@ -1,14 +1,83 @@
+// import React, { useState } from 'react';
+// import axios from 'axios';
+// import { Link } from 'react-router-dom';
+// import './LoginForm.css'
+
+// const LoginForm = ({ onLogin }) => {
+//   const [phone, setPhone] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [error, setError] = useState('');
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const res = await axios.get(`http://localhost:5174/users?phone=${phone}`);
+//       const user = res.data[0];
+
+//       if (user && user.password === password) {
+//         onLogin(user);
+//       } else {
+//         setError('Invalid credentials');
+//       }
+//     } catch (err) {
+//       setError('Error logging in');
+//     }
+//   };
+
+//   return (
+//     <div className="login-form">
+//       <h2>Login</h2>
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           placeholder="Phone Number"
+//           value={phone}
+//           onChange={(e) => setPhone(e.target.value)}
+//           required
+//         />
+//         <input
+//           type="password"
+//           placeholder="Password"
+//           value={password}
+//           onChange={(e) => setPassword(e.target.value)}
+//           required
+//         />
+//         <button type="submit">Login</button>
+//         {error && <p>{error}</p>}
+//       </form>
+//       <p>Don't have an account? <Link to="/register">Register</Link></p>
+//     </div>
+//   );
+// };
+
+// export default LoginForm;
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import './LoginForm.css';
 
 const LoginForm = ({ onLogin }) => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  const validatePhone = (phone) => {
+    const phoneRegex = /^[0-9]{10,15}$/; // basic validation for phone number
+    return phoneRegex.test(phone);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
+
+    if (!validatePhone(phone)) {
+      setError('Please enter a valid phone number.');
+      return;
+    }
+
+    setLoading(true); // Start loading
+
     try {
       const res = await axios.get(`http://localhost:5174/users?phone=${phone}`);
       const user = res.data[0];
@@ -16,35 +85,51 @@ const LoginForm = ({ onLogin }) => {
       if (user && user.password === password) {
         onLogin(user);
       } else {
-        setError('Invalid credentials');
+        setError('Invalid phone number or password.');
       }
     } catch (err) {
-      setError('Error logging in');
+      setError('Error logging in. Please try again later.');
+    } finally {
+      setLoading(false); // Stop loading
     }
   };
 
   return (
-    <div className="login-form">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Phone Number"
-          value={phone}
-          onChange={(e) => setPhone(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <button type="submit">Login</button>
-        {error && <p>{error}</p>}
-      </form>
-      <p>Don't have an account? <Link to="/register">Register</Link></p>
+    <div className="login-form-container">
+      <div className="login-form">
+        <h2>Login</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="Enter your phone number"
+              value={phone}
+              onChange={(e) => setPhone(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter your password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <button type="submit" className="login-btn" disabled={loading}>
+            {loading ? 'Logging in...' : 'Login'}
+          </button>
+          {error && <p className="error-message">{error}</p>}
+        </form>
+        <p>
+          Don't have an account? <Link to="/register">Register here</Link>
+        </p>
+      </div>
     </div>
   );
 };

@@ -1,15 +1,72 @@
+.user-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  /* background-color: #000; */
+  padding: 5vw;
+  box-sizing: border-box;
+}
+@media (max-width: 768px) {
+  .user-page-container {
+    padding: 4vw;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .user-page-container {
+    padding: 3vw;
+  }
+
+  .login-form {
+    max-width: 100%;
+  }
+}
 .user-page {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h2{
+  color: black;
+}
+h3 {
+  color: black;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3b5ded;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #3b5ded;
+  transform: scale(1.1);
+}
+
+button:last-child {
+  margin-right: 0;
+}
+
+p {
+  margin-top: 10px;
+  color: red;
+}

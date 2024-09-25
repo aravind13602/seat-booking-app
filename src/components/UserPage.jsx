@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './userPage.css';
 
 const UserPage = ({ onLogout }) => {
   const [userSeats, setUserSeats] = useState([]);
@@ -23,23 +24,21 @@ const UserPage = ({ onLogout }) => {
   };
 
   return (
+    <div classname='user-page-container'>
     <div className="user-page">
-      <h2>Welcome, {loggedInUser.phone}</h2>
-      <button onClick={onLogout}>Logout</button>
+      <h2>Welcome, {loggedInUser.name}</h2>
+      
 
-      <h3>Your Booked Seats</h3>
+      <h3>Available Seats: {userSeats.filter(seat => seat.status === 'available').length}</h3>
       {error && <p>{error}</p>}
-      {userSeats.length > 0 ? (
-        <ul>
-          {userSeats.map((seat) => (
-            <li key={seat.id}>Seat {seat.id} - Status: {seat.status}</li>
-          ))}
-        </ul>
-      ) : (
-        <p>You have not booked any seats yet.</p>
+      {userSeats.filter(seat => seat.status === 'available').length === 0 && (
+        <p>No available seats at the moment.</p>
       )}
 
+
       <button onClick={handleBookMoreSeats}>Book More Seats</button>
+      <button onClick={onLogout}>Logout</button>
+    </div>
     </div>
   );
 };
