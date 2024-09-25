@@ -29,13 +29,14 @@
 }
 
 .user-page {
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.75);
   padding: 2rem;
   border-radius: 8px;
   width: 100%;
   max-width: 400px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   text-align: center;
+  border-color: black;
 }
 
 h2{
@@ -44,7 +45,11 @@ h2{
 h3 {
   color: black;
 }
-
+input{
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: black;
+  border-radius: 20px;
+}
 button {
   margin-top: 20px;
   padding: 10px 20px;
@@ -52,6 +57,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 20px;
+  border-color: black;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -62,7 +68,9 @@ button:hover {
   background-color: #3b5ded;
   transform: scale(1.1);
 }
-
+button:disabled{
+  cursor: not-allowed;
+}
 button:last-child {
   margin-right: 0;
 }

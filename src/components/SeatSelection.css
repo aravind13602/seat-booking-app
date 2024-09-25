@@ -90,6 +90,9 @@ h2.seath {
   background-color: white;
   transform: scale(1.1);
 }
+.confirmbut:disabled{
+  background-color:#182cbe;
+}
 
 .legend {
   display: flex;

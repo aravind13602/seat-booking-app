@@ -1,56 +1,3 @@
-// import React, { useState } from 'react';
-// import axios from 'axios';
-// import { Link } from 'react-router-dom';
-// import './LoginForm.css'
-
-// const LoginForm = ({ onLogin }) => {
-//   const [phone, setPhone] = useState('');
-//   const [password, setPassword] = useState('');
-//   const [error, setError] = useState('');
-
-//   const handleSubmit = async (e) => {
-//     e.preventDefault();
-//     try {
-//       const res = await axios.get(`http://localhost:5174/users?phone=${phone}`);
-//       const user = res.data[0];
-
-//       if (user && user.password === password) {
-//         onLogin(user);
-//       } else {
-//         setError('Invalid credentials');
-//       }
-//     } catch (err) {
-//       setError('Error logging in');
-//     }
-//   };
-
-//   return (
-//     <div className="login-form">
-//       <h2>Login</h2>
-//       <form onSubmit={handleSubmit}>
-//         <input
-//           type="text"
-//           placeholder="Phone Number"
-//           value={phone}
-//           onChange={(e) => setPhone(e.target.value)}
-//           required
-//         />
-//         <input
-//           type="password"
-//           placeholder="Password"
-//           value={password}
-//           onChange={(e) => setPassword(e.target.value)}
-//           required
-//         />
-//         <button type="submit">Login</button>
-//         {error && <p>{error}</p>}
-//       </form>
-//       <p>Don't have an account? <Link to="/register">Register</Link></p>
-//     </div>
-//   );
-// };
-
-// export default LoginForm;
 import React, { useState } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
@@ -63,7 +10,7 @@ const LoginForm = ({ onLogin }) => {
   const [loading, setLoading] = useState(false);
 
   const validatePhone = (phone) => {
-    const phoneRegex = /^[0-9]{10,15}$/; // basic validation for phone number
+    const phoneRegex = /^[0-9]{10,15}$/; 
     return phoneRegex.test(phone);
   };
 
@@ -76,7 +23,7 @@ const LoginForm = ({ onLogin }) => {
       return;
     }
 
-    setLoading(true); // Start loading
+    setLoading(true); 
 
     try {
       const res = await axios.get(`http://localhost:5174/users?phone=${phone}`);
@@ -90,7 +37,7 @@ const LoginForm = ({ onLogin }) => {
     } catch (err) {
       setError('Error logging in. Please try again later.');
     } finally {
-      setLoading(false); // Stop loading
+      setLoading(false); 
     }
   };
 

@@ -1,22 +1,10 @@
 {
   "users": [
     {
-      "id": "b07e",
-      "name": "sasi",
-      "phone": "9123456789",
-      "password": "123"
-    },
-    {
-      "id": "5b11",
-      "name": "aravind",
+      "id": "391b",
+      "name": "Aravind",
       "phone": "8270762497",
-      "password": "123"
-    },
-    {
-      "id": "c35f",
-      "name": "sasi",
-      "phone": "9876543210",
-      "password": "123"
+      "password": "12345"
     }
   ],
   "seats": [
@@ -56,24 +44,24 @@
       "userId": null
     },
     {
-      "id": "8",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "8"
     },
     {
-      "id": "9",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "9"
     },
     {
-      "id": "10",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "10"
     },
     {
-      "id": "11",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "11"
     },
     {
       "id": "12",
@@ -96,38 +84,38 @@
       "userId": null
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "16"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "17"
     },
     {
-      "id": "18",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "18"
     },
     {
-      "id": "19",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "19"
     },
     {
-      "id": "20",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "20"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "21"
     },
     {
-      "status": "reserved",
-      "userId": "c35f",
+      "status": "available",
+      "userId": null,
       "id": "22"
     },
     {
@@ -136,38 +124,38 @@
       "userId": null
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "24"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "25"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "26"
     },
     {
-      "id": "27",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "27"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "28"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "29"
     },
     {
-      "status": "reserved",
-      "userId": "c35f",
+      "status": "available",
+      "userId": null,
       "id": "30"
     },
     {
@@ -176,38 +164,38 @@
       "userId": null
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "32"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "33"
     },
     {
-      "id": "34",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "34"
     },
     {
-      "status": "reserved",
-      "userId": "b07e",
+      "status": "available",
+      "userId": null,
       "id": "35"
     },
     {
-      "status": "reserved",
-      "userId": "b07e",
+      "status": "available",
+      "userId": null,
       "id": "36"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "37"
     },
     {
-      "status": "reserved",
-      "userId": "c35f",
+      "status": "available",
+      "userId": null,
       "id": "38"
     },
     {
@@ -216,38 +204,38 @@
       "userId": null
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "40"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "41"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "42"
     },
     {
-      "status": "reserved",
-      "userId": "b07e",
+      "status": "available",
+      "userId": null,
       "id": "43"
     },
     {
-      "status": "reserved",
-      "userId": "b07e",
+      "status": "available",
+      "userId": null,
       "id": "44"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "45"
     },
     {
-      "status": "reserved",
-      "userId": "c35f",
+      "status": "available",
+      "userId": null,
       "id": "46"
     },
     {
@@ -256,69 +244,69 @@
       "userId": null
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "48"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "49"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "50"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "51"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "52"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "53"
     },
     {
-      "id": "54",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "54"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "55"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "56"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "57"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "58"
     },
     {
-      "status": "reserved",
-      "userId": "5b11",
+      "status": "available",
+      "userId": null,
       "id": "59"
     },
     {
-      "id": "60",
       "status": "available",
-      "userId": null
+      "userId": null,
+      "id": "60"
     }
   ]
 }
