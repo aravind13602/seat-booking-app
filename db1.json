@@ -11,6 +11,12 @@
       "name": "aravind",
       "phone": "8270762497",
       "password": "123"
+    },
+    {
+      "id": "c35f",
+      "name": "sasi",
+      "phone": "9876543210",
+      "password": "123"
     }
   ],
   "seats": [
@@ -120,9 +126,9 @@
       "id": "21"
     },
     {
-      "id": "22",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "c35f",
+      "id": "22"
     },
     {
       "id": "23",
@@ -160,9 +166,9 @@
       "id": "29"
     },
     {
-      "id": "30",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "c35f",
+      "id": "30"
     },
     {
       "id": "31",
@@ -200,9 +206,9 @@
       "id": "37"
     },
     {
-      "id": "38",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "c35f",
+      "id": "38"
     },
     {
       "id": "39",
@@ -240,9 +246,9 @@
       "id": "45"
     },
     {
-      "id": "46",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "c35f",
+      "id": "46"
     },
     {
       "id": "47",
