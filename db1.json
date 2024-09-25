@@ -130,19 +130,19 @@
       "userId": null
     },
     {
-      "id": "24",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "5b11",
+      "id": "24"
     },
     {
-      "id": "25",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "5b11",
+      "id": "25"
     },
     {
-      "id": "26",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "5b11",
+      "id": "26"
     },
     {
       "id": "27",
@@ -175,9 +175,9 @@
       "id": "32"
     },
     {
-      "id": "33",
-      "status": "available",
-      "userId": null
+      "status": "reserved",
+      "userId": "5b11",
+      "id": "33"
     },
     {
       "id": "34",

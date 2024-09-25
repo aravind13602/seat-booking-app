@@ -5,81 +5,61 @@
     height: 100vh;
     width: 100vw;
     background-color: #000;
-    /* Set the background color to black */
     padding: 5vw;
     box-sizing: border-box;
 }
 
 .registration-form {
     background-color: #ffffff;
-    /* White background for the form */
     padding: 2rem;
     border-radius: 10px;
-    /* Slightly more rounded corners */
     width: 100%;
     max-width: 450px;
-    /* A bit wider than before */
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    /* Softer shadow for depth */
 }
 
 h2 {
     text-align: center;
     margin-bottom: 1.5rem;
     color: black;
-    /* Change heading color to white for better visibility */
 }
 
 .form-group {
     margin-bottom: 1.5rem;
-    /* Increased spacing between inputs */
 }
 
 input {
     width: 100%;
     padding: 15px;
-    /* More padding for a comfortable touch */
     border: 1px solid #ced4da;
-    /* Light border for inputs */
     border-radius: 5px;
-    /* Rounded corners */
     background-color: #ffffff;
     color: #000;
-    /* Darker text color */
     font-size: 1rem;
     box-sizing: border-box;
 }
 
 input:focus {
     border-color: #80bdff;
-    /* Blue focus border */
     outline: none;
-    /* No outline */
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    /* Slight shadow effect on focus */
 }
 
 .register-btn {
     width: 100%;
     padding: 0.75rem;
     background-color: #3b5ded;
-    /* Primary button color */
     color: #ffffff;
-    /* White text */
     border: none;
     border-radius: 20px;
-    /* Rounded corners for button */
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    /* Transition effects */
 }
 
 .register-btn:hover {
     background-color: #3b5ded;
-    /* Darker blue on hover */
     transform: scale(1.1);
-    /* Slight lift effect */
 }
 
 .error-message {
@@ -93,18 +73,15 @@ p {
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #fff;
-    /* Change paragraph color to white */
 }
 
 p a {
     color: #3b5ded;
     text-decoration: none;
-    /* No underline for links */
 }
 
 p a:hover {
     text-decoration: underline;
-    /* Underline on hover */
 }
 
 @media (max-width: 768px) {

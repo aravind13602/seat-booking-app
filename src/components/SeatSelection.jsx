@@ -54,7 +54,7 @@ const SeatSelection = ({ onLogout }) => {
 
   return (
     <div className="seat-selection">
-      {/* <button onClick={onLogout}>Logout</button> */}
+      
       <h2 className='seath'>Choose Seats</h2>
       <svg width="85%" height="65" viewBox="0 45 1000 100">
         <path
@@ -63,8 +63,10 @@ const SeatSelection = ({ onLogout }) => {
           stroke="white"
           strokeWidth="2"
         />
+        
       </svg>
-      <div className='light'></div>
+      
+      
       <div className="seats first-row">
         {seats.slice(0, 6).map((seat) => (
           <div
@@ -95,7 +97,7 @@ const SeatSelection = ({ onLogout }) => {
         ))}
       </div>
 
-      <button onClick={handleConfirm} disabled={selectedSeats.length === 0}>
+      <button className='confirmbut'onClick={handleConfirm} disabled={selectedSeats.length === 0}>
         Confirm
       </button>
       {error && <p>{error}</p>}

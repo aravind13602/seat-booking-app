@@ -1,4 +1,3 @@
-
 .seat-selection {
   text-align: center;
   padding: 5vw;
@@ -6,17 +5,18 @@
   color: white;
   font-family: Arial, sans-serif;
 }
+
 @media (max-width: 768px) {
   .seat-selection {
     padding: 15px;
-    
+
   }
 }
 
 @media (max-width: 480px) {
   .seat-selection {
     padding: 10px;
-    
+
   }
 }
 
@@ -36,9 +36,11 @@
   margin-bottom: 7px;
   margin-top: 7px;
 }
-h2.seath{
+
+h2.seath {
   color: white;
 }
+
 .middle-rows {
   display: grid;
   grid-template-columns: repeat(3, 40px) 70px repeat(4, 40px);
@@ -73,15 +75,20 @@ h2.seath{
   border-color: #00ffff;
 }
 
-button {
+.confirmbut {
   margin-top: 20px;
   padding: 10px 30px;
   background-color: white;
-  color:black;
+  color: black;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-weight: bold;
+}
+
+.confirmbut:hover {
+  background-color: white;
+  transform: scale(1.1);
 }
 
 .legend {

@@ -19,7 +19,7 @@ const Registration = () => {
       await axios.post('http://localhost:5174/users', { name, phone, password });
       setSuccess('Registration successful');
       setError('');
-      navigate('/login'); // Navigate to login page
+      navigate('/login'); 
     } catch (err) {
       setError('Registration failed');
     }
