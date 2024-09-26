@@ -16,7 +16,7 @@ const Registration = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5174/users', { name, phone, password });
+      await axios.post('https://seat-backend.onrender.com/users', { name, phone, password });
       setSuccess('Registration successful');
       setError('');
       navigate('/login'); 

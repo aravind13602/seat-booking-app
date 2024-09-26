@@ -15,7 +15,7 @@ const UserPage = ({ onLogout }) => {
   useEffect(() => {
     if (loggedInUser) {
       axios
-        .get(`http://localhost:5174/seats?userId=${loggedInUser.id}`)
+        .get(`https://seat-backend.onrender.com/seats`)
         .then((res) => setUserSeats(res.data))
         .catch(() => setError('Failed to load booked seats'));
     }

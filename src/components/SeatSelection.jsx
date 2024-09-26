@@ -17,7 +17,7 @@ const SeatSelection = ({ onLogout }) => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5174/seats')
+      .get('https://seat-backend.onrender.com/seats')
       .then((res) => {
         setSeats(res.data);
         const availableSeats = res.data.filter((seat) => seat.status === 'available');
@@ -47,7 +47,7 @@ const SeatSelection = ({ onLogout }) => {
     try {
       await Promise.all(
         selectedSeats.map((seatId) =>
-          axios.put(`http://localhost:5174/seats/${seatId}`, {
+          axios.put(`https://seat-backend.onrender.com/seats/${seatId}`, {
             status: 'reserved',
             userId: loggedInUser.id,
           })

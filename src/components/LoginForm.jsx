@@ -26,7 +26,7 @@ const LoginForm = ({ onLogin }) => {
     setLoading(true); 
 
     try {
-      const res = await axios.get(`http://localhost:5174/users?phone=${phone}`);
+      const res = await axios.get(`https://seat-backend.onrender.com/users?phone=${phone}`);
       const user = res.data[0];
 
       if (user && user.password === password) {
