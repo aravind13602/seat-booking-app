@@ -4,6 +4,7 @@
   background-color: #3b5ded;
   color: white;
   font-family: Arial, sans-serif;
+  
 }
 
 @media (max-width: 768px) {
@@ -58,7 +59,7 @@ h2.seath {
   align-items: center;
   cursor: pointer;
   border: 2px solid rgba(255, 255, 255, 0.5);
-  border-radius: 12px;
+  border-radius: 10px;
 }
 
 .seat.available {
@@ -90,8 +91,9 @@ h2.seath {
   background-color: white;
   transform: scale(1.1);
 }
-.confirmbut:disabled{
-  background-color:#182cbe;
+
+.confirmbut:disabled {
+  background-color: #182cbe;
 }
 
 .legend {
@@ -123,4 +125,46 @@ h2.seath {
 
 .legend-color.available {
   border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* SeatSelection.css */
+
+.seat-legend-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 30px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-seat {
+  width: 20px;
+  height: 20px;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  pointer-events: none;
+  
+}
+
+.selected-legend {
+  background-color: #00ffff;
+  
+}
+
+.reserved-legend {
+  background-color: rgba(255, 255, 255, 0.3);
+  
+}
+
+.available-legend {
+  background-color: transparent;
+  color: white;
+  
 }

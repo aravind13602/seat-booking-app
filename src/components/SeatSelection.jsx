@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { ToastContainer,toast } from 'react-toastify';
 import './SeatSelection.css';
 
 const SeatSelection = ({ onLogout }) => {
@@ -14,14 +13,14 @@ const SeatSelection = ({ onLogout }) => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const seatCount = location.state?.seatCount || 1;  
-  
+  const seatCount = location.state?.seatCount || 1;
+
   useEffect(() => {
     axios
       .get('http://localhost:5174/seats')
       .then((res) => {
         setSeats(res.data);
-        const availableSeats = res.data.filter(seat => seat.status === 'available');
+        const availableSeats = res.data.filter((seat) => seat.status === 'available');
         if (availableSeats.length === 0) {
           setIsAllSeatsReserved(true);
         }
@@ -35,7 +34,7 @@ const SeatSelection = ({ onLogout }) => {
     } else if (selectedSeats.length < seatCount) {
       setSelectedSeats([...selectedSeats, seatId]);
     } else {
-      alert(`You cant select more than ${seatCount} seats.`);
+      alert(`You can't select more than ${seatCount} seats.`);
     }
   };
 
@@ -64,28 +63,19 @@ const SeatSelection = ({ onLogout }) => {
 
   return (
     <div className="seat-selection">
-      <h2 className='seath'>Choose Seats </h2>
-      <h2 className='seath'>(You must select exactly {seatCount} seats)</h2>
-      <svg width="80%" height="100" viewBox="0 0 1000 200">
-                 <defs>
-                   
-                   <radialGradient id="arc-light-gradient" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
-                    <stop offset="0%" style={{ stopColor: 'white', stopOpacity: 0.2 }} /> 
-                     <stop offset="100%" style={{ stopColor: 'white', stopOpacity: 0 }} /> 
-                   </radialGradient>
-                 </defs>
-                 <path
-                   d="M0 100 Q 500 0, 1000 100"
-                   fill="none"
-                   stroke="white"
-                   strokeWidth="2"
-                 />
-                 <path
-                   d="M 0 100 Q 500 0, 1000 100 L 1200 350 L -200 350 Z"
-                   fill="url(#arc-light-gradient)"
-                 />
-               </svg>
-      
+      <h2 className="seath">Choose Seats </h2>
+      <h2 className="seath">(You must select exactly {seatCount} seats)</h2>
+      <svg width="100%" height="100" viewBox="0 0 1000 200">
+        <defs>
+          <radialGradient id="arc-light-gradient" cx="50%" cy="0%" r="100%" fx="50%" fy="0%">
+            <stop offset="0%" style={{ stopColor: 'white', stopOpacity: 0.15 }} />
+            <stop offset="100%" style={{ stopColor: 'white', stopOpacity: 0 }} />
+          </radialGradient>
+        </defs>
+        <path d="M 100 100 Q 500 0, 950 100" fill="none" stroke="white" strokeWidth="2" />
+        <path d="M 100 100 Q 500 0, 950 100 L 1200 350 L -200 350 Z " fill="url(#arc-light-gradient)" />
+      </svg>
+3300
       <div className="theater-screen">
         <div className="screen-shadow" />
       </div>
@@ -120,7 +110,8 @@ const SeatSelection = ({ onLogout }) => {
         ))}
       </div>
 
-      <button className='confirmbut'
+      <button
+        className="confirmbut"
         onClick={handleConfirm}
         disabled={selectedSeats.length !== seatCount}
       >
@@ -129,6 +120,22 @@ const SeatSelection = ({ onLogout }) => {
 
       {error && <p>{error}</p>}
       {isAllSeatsReserved && <p>All seats are reserved</p>}
+
+      {/* Seat status legend */}
+      <div className="seat-legend-container">
+        <div className="legend-item">
+          <div className="legend-seat selected-legend"></div>
+          <span>Selected</span>
+        </div>
+        <div className="legend-item">
+          <div className="legend-seat reserved-legend"></div>
+          <span>Reserved</span>
+        </div>
+        <div className="legend-item">
+          <div className="legend-seat available-legend"></div>
+          <span>Available</span>
+        </div>
+      </div>
     </div>
   );
 };
