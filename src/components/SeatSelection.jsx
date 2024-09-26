@@ -75,7 +75,7 @@ const SeatSelection = ({ onLogout }) => {
         <path d="M 100 100 Q 500 0, 950 100" fill="none" stroke="white" strokeWidth="2" />
         <path d="M 100 100 Q 500 0, 950 100 L 1200 350 L -200 350 Z " fill="url(#arc-light-gradient)" />
       </svg>
-3300
+
       <div className="theater-screen">
         <div className="screen-shadow" />
       </div>
