@@ -1,5 +1,4 @@
-
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './UserPage.css';
@@ -10,7 +9,7 @@ const UserPage = ({ onLogout }) => {
   const [seatsToBook, setSeatsToBook] = useState(0);
   const navigate = useNavigate();
 
-  const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+  const loggedInUser = useMemo(() => JSON.parse(localStorage.getItem('loggedInUser')), []);
 
   useEffect(() => {
     if (loggedInUser) {
@@ -39,7 +38,7 @@ const UserPage = ({ onLogout }) => {
   return (
     <div className="user-page-container">
       <div className="user-page">
-        <h2>Welcome, {loggedInUser.name}</h2>
+        <h2>Welcome, {loggedInUser?.name}</h2>
         <h3>Available Seats: {availableSeatCount}</h3>
         {error && <p>{error}</p>}
         {availableSeatCount === 0 && <p>No available seats at the moment.</p>}
@@ -65,5 +64,3 @@ const UserPage = ({ onLogout }) => {
 };
 
 export default UserPage;
-
-
