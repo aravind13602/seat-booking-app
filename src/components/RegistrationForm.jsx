@@ -1,8 +1,7 @@
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import './RegistrationForm.css'; 
+import './RegistrationForm.css';
 
 const Registration = () => {
   const [name, setName] = useState('');
@@ -10,18 +9,22 @@ const Registration = () => {
   const [password, setPassword] = useState('');
   const [success, setSuccess] = useState('');
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false); // New loading state
 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Set loading to true when starting the API call
     try {
       await axios.post('https://seat-backend.onrender.com/users', { name, phone, password });
       setSuccess('Registration successful');
       setError('');
-      navigate('/login'); 
+      navigate('/login');
     } catch (err) {
       setError('Registration failed');
+    } finally {
+      setLoading(false); // Reset loading state after the API call completes
     }
   };
 
@@ -57,7 +60,13 @@ const Registration = () => {
               required
             />
           </div>
-          <button type="submit" className="register-btn">Register</button>
+          <button
+            type="submit"
+            className="register-btn"
+            disabled={loading} // Disable button while loading
+          >
+            {loading ? 'Loading...' : 'Register'} {/* Change button text based on loading state */}
+          </button>
           {success && <p>{success}</p>}
           {error && <p className="error-message">{error}</p>}
         </form>

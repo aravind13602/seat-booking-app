@@ -43,7 +43,7 @@ const UserPage = ({ onLogout }) => {
         {error && <p>{error}</p>}
         {availableSeatCount === 0 && <p>No available seats at the moment.</p>}
 
-        <input
+        <input id='seatsrequest'
           type="number"
           min="1"
           max={availableSeatCount}
